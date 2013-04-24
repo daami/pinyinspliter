@@ -24,10 +24,8 @@ public class PinyinDicUtil
     static
     {
         URL url = PinyinDicUtil.class.getClassLoader().getResource(dicFileName);
-        String dicFilePath = null;
-        if (url.toString().startsWith("file:")) {
-            dicFilePath = url.toString().substring("file:".length());
-        }
+        String dicFilePath = url.getPath();
+
         File dicFile = new File(dicFilePath);
         
         BufferedReader br = null;
