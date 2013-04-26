@@ -90,7 +90,10 @@ public class PinyinDicUtil
     public static Set<String> getChineseCharSet(String pinyin)
     {
         Set<String> chineseCharSet = new HashSet<String>();       
-        
+        if(pinyinDic != null )
+        {
+            chineseCharSet = pinyinDic.get(pinyin);
+        }
         return chineseCharSet;
     }
 }
